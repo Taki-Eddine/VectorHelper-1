@@ -44,3 +44,18 @@ class VectorHelper(object):
             retourne la taille du vecteur
         """
         return self.__size
+
+    def MinMax(self):
+        """
+            Gives both Min and Max of Vector
+            retourne le plus petit et le plus grand elements du vecteur 
+        """
+        min = self.__elements[0]
+        max = min
+        for i in range(1, self.size):
+            if self.__elements[i] < min :
+                min = self.__elements[i]
+            if max < self.__elements[i] :     
+                max = self.__elements[i]
+              
+        return min , max  

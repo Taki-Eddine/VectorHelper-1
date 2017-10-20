@@ -59,3 +59,13 @@ class VectorHelper(object):
                 max = self.__elements[i]
               
         return min , max  
+    def sort(self):
+        """l
+            Sorts Elements of the vector
+            Tri les elements du vecteur
+        """
+        for i in range(0, self.size - 1):
+            for j in range (0 , self.size - i - 1):
+                if self.__elements[j+1] < self.__elements[j] :
+                    self.__elements[j] , self.__elements[j+1] = self.__elements[j+1] , self.__elements[j]
+    

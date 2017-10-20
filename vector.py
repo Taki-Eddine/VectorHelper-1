@@ -30,3 +30,17 @@ class VectorHelper(object):
             i += 1
         temp_vector.append(component)
         return temp_vector
+    
+    @property
+    def get_elements(self):
+        """
+            retourne les elements du vecteur 
+        """
+        return self.__elements
+
+    @property
+    def size(self):
+        """
+            retourne la taille du vecteur
+        """
+        return self.__size

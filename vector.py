@@ -78,5 +78,21 @@ class VectorHelper(object):
         for i in range(1, self.size + 1):
             reversed.append(self.__elements[self.size - i])
         return reversed    
+    
+    def somme(self,other):
+        """
+            returns sum of 2 vectors 
+            throws eception if size of the 2 is not the same 
+            reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente
+            :type other: VectorHelper
+            :param other: le vecteur qu'on veut ajouter au premier vecteur
+        """
+        if self.size != other.size :
+            raise SizeException("la exception mon friend")
+        else: 
+            sum = list()
+            for i in range(0, self.size):
+                sum.append(self.__elements[i] + other.__elements[i] )
+            return sum   
                 
     

@@ -69,3 +69,14 @@ class VectorHelper(object):
                 if self.__elements[j+1] < self.__elements[j] :
                     self.__elements[j] , self.__elements[j+1] = self.__elements[j+1] , self.__elements[j]
     
+    def inverse(self):
+        """
+            returns reversed elements of the vec
+            inverse les elements du vecteur ex: (1,2,3) --- (3,2,1)
+        """
+        reversed = list()
+        for i in range(1, self.size + 1):
+            reversed.append(self.__elements[self.size - i])
+        return reversed    
+                
+    

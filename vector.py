@@ -3,10 +3,12 @@
 
 class VectorHelper(object):
 
-    __elements = list()
-    __size = 0
+    
 
     def __init__(self, string_vector):
+        __elements = list()
+        __size = 0
+        
         self.__elements = list(map(float, self.__parse(string_vector)))
         self.__size = len(self.__elements)
 

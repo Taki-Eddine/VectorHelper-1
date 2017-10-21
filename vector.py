@@ -4,7 +4,7 @@
 class VectorHelper(object):
 
     __elements = list()
-    __size = list()
+    __size = 0
 
     def __init__(self, string_vector):
         self.__elements = list(map(float, self.__parse(string_vector)))
@@ -72,7 +72,7 @@ class VectorHelper(object):
     def inverse(self):
         """
             returns reversed elements of the vec
-            inverse les elements du vecteur ex: (1,2,3) --- (3,2,1)
+            inverse les elements du vecteur ex: (1,2,3) ---> (3,2,1)
         """
         reversed = list()
         for i in range(1, self.size + 1):
@@ -82,7 +82,7 @@ class VectorHelper(object):
     def somme(self,other):
         """
             returns sum of 2 vectors 
-            throws eception if size of the 2 is not the same 
+            throws exception if size of the two vectors is not the same 
             reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente
             :type other: VectorHelper
             :param other: le vecteur qu'on veut ajouter au premier vecteur

@@ -1,32 +1,30 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Vector.vector &mdash; VectorHelper 0.0.1 documentation</title>
-    
+    <title>Vector.vector &#8212; VectorHelper 0.0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="VectorHelper 0.0.1 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" /> 
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -36,8 +34,8 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">VectorHelper 0.0.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">VectorHelper 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -47,12 +45,21 @@
           <div class="body" role="main">
             
   <h1>Source code for Vector.vector</h1><div class="highlight"><pre>
-<span class="ch">#!/usr/bin/python3</span>
+<span></span><span class="ch">#!/usr/bin/python3</span>
 
 
 <div class="viewcode-block" id="VectorHelper"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper">[docs]</a><span class="k">class</span> <span class="nc">VectorHelper</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Main class</span>
+
+<span class="sd">    the class offers methods to opperate on vectors</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">        elements: a list which contains elemeents of the vector</span>
+<span class="sd">        size: an int containing the number of elements</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string_vector</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;inits VectorHelper with the elements of the vector and its size&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__size</span> <span class="o">=</span> <span class="mi">0</span>
         
@@ -61,7 +68,12 @@
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">__parse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Takes the string entered by the user and turns it into a list of floats</span>
 
+<span class="sd">        the string entered by the user must be containing numbers seperated with a letter or a symbole </span>
+<span class="sd">        the numbers mustn&#39;t be seperated with &quot;-&quot; or &quot;.&quot;</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">component</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">temp_vector</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -82,27 +94,27 @@
     
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">get_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        This is a @property method</span>
-<span class="sd">        :returns: returns a list of vector&#39;s elements</span>
+        <span class="sd">&quot;&quot;&quot;Gets elements of Vector</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            A list of the vector&#39;s elements.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            retourne la taille du vecteur</span>
-<span class="sd">            :rtype: int</span>
-<span class="sd">            :returns: the size of the vector</span>
+        <span class="sd">&quot;&quot;&quot;Gets size of the vector</span>
+<span class="sd">            </span>
+<span class="sd">        Returns: </span>
+<span class="sd">            the size of the vector</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__size</span>
 
 <div class="viewcode-block" id="VectorHelper.MinMax"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.MinMax">[docs]</a>    <span class="k">def</span> <span class="nf">MinMax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            Gives both Min and Max of Vector</span>
-<span class="sd">            retourne le plus petit et le plus grand elements du vecteur</span>
-<span class="sd">            :rtype: tuple</span>
-<span class="sd">            :returns: a tuple containing min and max values of the vector</span>
+        <span class="sd">&quot;&quot;&quot;Returns both Min and Max of Vector</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">             a tuple containing min and max values of the vector</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">min</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="nb">max</span> <span class="o">=</span> <span class="nb">min</span>
@@ -114,35 +126,48 @@
               
         <span class="k">return</span> <span class="nb">min</span> <span class="p">,</span> <span class="nb">max</span>  </div>
 <div class="viewcode-block" id="VectorHelper.sort"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.sort">[docs]</a>    <span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            Sorts Elements of the vector</span>
-<span class="sd">            Tri les elements du vecteur</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Sorts Elements of the vector&quot;&quot;&quot;</span>
+
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">j</span><span class="p">]</span></div>
     
 <div class="viewcode-block" id="VectorHelper.inverse"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            returns reversed elements of the vec</span>
-<span class="sd">            inverse les elements du vecteur ex: (1,2,3) ---&gt; (3,2,1)</span>
+        <span class="sd">&quot;&quot;&quot;Returns reversed elements of the vec</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            a list containing reversed elements of vector</span>
+<span class="sd">            example:</span>
+
+<span class="sd">            {(1,2,3)} ---&gt; {(3,2,1)}</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+
         <span class="nb">reversed</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
             <span class="nb">reversed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="n">i</span><span class="p">])</span>
         <span class="k">return</span> <span class="nb">reversed</span>    </div>
     
 <div class="viewcode-block" id="VectorHelper.somme"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.somme">[docs]</a>    <span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            returns sum of 2 vectors.</span>
-<span class="sd">            throws exception if size of the two vectors is not the same.</span>
-<span class="sd">            reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente.</span>
-<span class="sd">            :type other: VectorHelper</span>
-<span class="sd">            :param other: le vecteur qu&#39;on veut ajouter au premier vecteur</span>
-<span class="sd">            :rtype: VectorHelper</span>
-<span class="sd">            :raises: SizeException: if the two vectors have different sizes.</span>
+        <span class="sd">&quot;&quot;&quot;Returns sum of 2 vectors</span>
+<span class="sd">        </span>
+<span class="sd">        Adds two vectors element by elemen. if size of vectors is not the same </span>
+<span class="sd">        an exception is raised. </span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            Other: the list of elements we want to add to our vector</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            a new list contaion the sum of the two vectors</span>
+<span class="sd">            example:</span>
+
+<span class="sd">            self = {(1,2,3)} and other = {(2,3,4)}</span>
+<span class="sd">            returns {(3,5,7)}</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            SizeException: if the two vectors have different sizes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span> <span class="p">:</span>
             <span class="k">raise</span> <span class="n">SizeException</span><span class="p">(</span><span class="s2">&quot;la exception mon friend&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span> 
@@ -153,8 +178,10 @@
                 
 
 <div class="viewcode-block" id="SizeException"><a class="viewcode-back" href="../../Vector.html#Vector.vector.SizeException">[docs]</a><span class="k">class</span> <span class="nc">SizeException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception class raised when two sizes are different&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;inits SizeException with none&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
 
 
@@ -168,14 +195,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -191,13 +215,13 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">VectorHelper 0.0.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">VectorHelper 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, Cherief &amp; Kerris.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+        &#169; Copyright 2017, Cherief &amp; Kerris.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
   </body>
 </html>

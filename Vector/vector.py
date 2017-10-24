@@ -60,7 +60,7 @@ class VectorHelper(object):
               
         return min , max  
     def sort(self):
-        """l
+        """
             Sorts Elements of the vector
             Tri les elements du vecteur
         """

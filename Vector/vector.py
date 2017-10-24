@@ -2,7 +2,10 @@
 
 
 class VectorHelper(object):
-
+    """
+    :py:class: VectorHelper
+    this is the main class of our vector implementation
+    """
     def __init__(self, string_vector):
         self.__elements = list()
         self.__size = 0
@@ -34,7 +37,9 @@ class VectorHelper(object):
     @property
     def get_elements(self):
         """
-            retourne les elements du vecteur 
+            retourne les elements du vecteur
+            :rtype: list
+            :returns: a list of the vector's elements.
         """
         return self.__elements
 
@@ -42,13 +47,17 @@ class VectorHelper(object):
     def size(self):
         """
             retourne la taille du vecteur
+            :rtype: int
+            :returns: the size of the vector
         """
         return self.__size
 
     def MinMax(self):
         """
             Gives both Min and Max of Vector
-            retourne le plus petit et le plus grand elements du vecteur 
+            retourne le plus petit et le plus grand elements du vecteur
+            :rtype: tuple
+            :returns: a tuple containing min and max values of the vector
         """
         min = self.__elements[0]
         max = min
@@ -81,11 +90,13 @@ class VectorHelper(object):
     
     def somme(self, other):
         """
-            returns sum of 2 vectors 
-            throws exception if size of the two vectors is not the same 
-            reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente
+            returns sum of 2 vectors.
+            throws exception if size of the two vectors is not the same.
+            reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente.
             :type other: VectorHelper
             :param other: le vecteur qu'on veut ajouter au premier vecteur
+            :rtype: VectorHelper
+            :raises: SizeException: if the two vectors have different sizes.
         """
         if self.size != other.size :
             raise SizeException("la exception mon friend")

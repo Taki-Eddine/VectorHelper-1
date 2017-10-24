@@ -128,6 +128,17 @@ class VectorHelper(object):
             for i in range(0, self.size):
                 sum.append(self.__elements[i] + other.__elements[i] )
             return sum   
+
+
+    def Mult2(self):
+        """Multiplies all vector elements by 2
+        
+        Returns:
+            a list of the vectors elements multiplied by 2
+        """
+        for i in range(0, self.size):
+            self.__elements[i] = self.__elements[i] * 2
+        return self.__elements
                 
 
 class SizeException(Exception):

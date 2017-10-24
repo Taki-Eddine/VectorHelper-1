@@ -65,13 +65,16 @@
 <dt id="Vector.vector.VectorHelper.MinMax">
 <code class="descname">MinMax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Vector/vector.html#VectorHelper.MinMax"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.VectorHelper.MinMax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives both Min and Max of Vector
-retourne le plus petit et le plus grand elements du vecteur</p>
+retourne le plus petit et le plus grand elements du vecteur
+:rtype: tuple
+:returns: a tuple containing min and max values of the vector</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="Vector.vector.VectorHelper.get_elements">
 <code class="descname">get_elements</code><a class="headerlink" href="#Vector.vector.VectorHelper.get_elements" title="Permalink to this definition">¶</a></dt>
-<dd><p>retourne les elements du vecteur</p>
+<dd><p>This is a &#64;property method
+:returns: returns a list of vector&#8217;s elements</p>
 </dd></dl>
 
 <dl class="method">
@@ -84,24 +87,27 @@ inverse les elements du vecteur ex: (1,2,3) &#8212;&gt; (3,2,1)</p>
 <dl class="attribute">
 <dt id="Vector.vector.VectorHelper.size">
 <code class="descname">size</code><a class="headerlink" href="#Vector.vector.VectorHelper.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>retourne la taille du vecteur</p>
+<dd><p>retourne la taille du vecteur
+:rtype: int
+:returns: the size of the vector</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Vector.vector.VectorHelper.somme">
 <code class="descname">somme</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Vector/vector.html#VectorHelper.somme"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.VectorHelper.somme" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns sum of 2 vectors 
-throws exception if size of the two vectors is not the same 
-reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente
+<dd><p>returns sum of 2 vectors.
+throws exception if size of the two vectors is not the same.
+reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente.
 :type other: VectorHelper
-:param other: le vecteur qu&#8217;on veut ajouter au premier vecteur</p>
+:param other: le vecteur qu&#8217;on veut ajouter au premier vecteur
+:rtype: VectorHelper
+:raises: SizeException: if the two vectors have different sizes.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="Vector.vector.VectorHelper.sort">
 <code class="descname">sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Vector/vector.html#VectorHelper.sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.VectorHelper.sort" title="Permalink to this definition">¶</a></dt>
-<dd><p>l
-Sorts Elements of the vector
+<dd><p>Sorts Elements of the vector
 Tri les elements du vecteur</p>
 </dd></dl>
 

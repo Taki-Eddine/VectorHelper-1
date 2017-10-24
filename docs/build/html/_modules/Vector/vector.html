@@ -83,7 +83,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">get_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            retourne les elements du vecteur </span>
+<span class="sd">        This is a @property method</span>
+<span class="sd">        :returns: returns a list of vector&#39;s elements</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span>
 
@@ -91,13 +92,17 @@
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            retourne la taille du vecteur</span>
+<span class="sd">            :rtype: int</span>
+<span class="sd">            :returns: the size of the vector</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__size</span>
 
 <div class="viewcode-block" id="VectorHelper.MinMax"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.MinMax">[docs]</a>    <span class="k">def</span> <span class="nf">MinMax</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Gives both Min and Max of Vector</span>
-<span class="sd">            retourne le plus petit et le plus grand elements du vecteur </span>
+<span class="sd">            retourne le plus petit et le plus grand elements du vecteur</span>
+<span class="sd">            :rtype: tuple</span>
+<span class="sd">            :returns: a tuple containing min and max values of the vector</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">min</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="nb">max</span> <span class="o">=</span> <span class="nb">min</span>
@@ -109,7 +114,7 @@
               
         <span class="k">return</span> <span class="nb">min</span> <span class="p">,</span> <span class="nb">max</span>  </div>
 <div class="viewcode-block" id="VectorHelper.sort"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.sort">[docs]</a>    <span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;l</span>
+        <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Sorts Elements of the vector</span>
 <span class="sd">            Tri les elements du vecteur</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -130,11 +135,13 @@
     
 <div class="viewcode-block" id="VectorHelper.somme"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.somme">[docs]</a>    <span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">            returns sum of 2 vectors </span>
-<span class="sd">            throws exception if size of the two vectors is not the same </span>
-<span class="sd">            reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente</span>
+<span class="sd">            returns sum of 2 vectors.</span>
+<span class="sd">            throws exception if size of the two vectors is not the same.</span>
+<span class="sd">            reourne la somme de deux vecteurs, donne une erreur si la taille des deux est differente.</span>
 <span class="sd">            :type other: VectorHelper</span>
 <span class="sd">            :param other: le vecteur qu&#39;on veut ajouter au premier vecteur</span>
+<span class="sd">            :rtype: VectorHelper</span>
+<span class="sd">            :raises: SizeException: if the two vectors have different sizes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span> <span class="p">:</span>
             <span class="k">raise</span> <span class="n">SizeException</span><span class="p">(</span><span class="s2">&quot;la exception mon friend&quot;</span><span class="p">)</span>

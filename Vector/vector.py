@@ -99,7 +99,16 @@ class VectorHelper(object):
         reversed = list()
         for i in range(1, self.size + 1):
             reversed.append(self.__elements[self.size - i])
-        return reversed    
+        return reversed  
+    def Mult2(self):
+        """Multiplies all vector elements by 2
+        
+        Returns:
+            a list of the vectors elements multiplied by 2
+        """
+        for i in range(0, self.size):
+            self.__elements[i] = self.__elements[i] * 2
+        return self.__elements      
     
     def somme(self, other):
         """Returns sum of 2 vectors
@@ -122,30 +131,62 @@ class VectorHelper(object):
         """
 
         if self.size != other.size :
-            raise SizeException("la exception mon friend")
+            raise SizeException
         else: 
             sum = list()
             for i in range(0, self.size):
                 sum.append(self.__elements[i] + other.__elements[i] )
             return sum   
-
-
-    def Mult2(self):
-        """Multiplies all vector elements by 2
-        
-        Returns:
-            a list of the vectors elements multiplied by 2
-        """
-        for i in range(0, self.size):
-            self.__elements[i] = self.__elements[i] * 2
-        return self.__elements
                 
 
 class SizeException(Exception):
     """Exception class raised when two sizes are different"""
-
-    def __init__(self, msg=None):
-        """inits SizeException with none"""
-        super(msg)
+    pass
 
 
+def main():
+    print("_________________________ WELCOME TO VETOR HELPER ________________________ ")
+    print("__________________________________________________________________________ ")
+    
+    vec1 = raw_input("Enter Your Vector: \n ")
+    vec1 = VectorHelper(vec1)
+    while(1):
+        print("\n______________________________ MENU ______________________________________\n")
+        print("1- Tri du vecteur")
+        print("2- inverser le vecteur")
+        print("3- Min et Max du vecteur")
+        print("4- Multiplier le vecteur par 2")
+        print("5- Ajouter un autre vecteur")
+        print("6- Nouveau vecteur")
+        print("7- Quitter")
+        print("__________________________________________________________________________ ")
+        answer = raw_input("Votre Choix:\t ")
+        if answer == "1" :
+            vec1.sort()
+            print(vec1.get_elements)    
+    
+        if answer == "2" :
+            print(vec1.inverse())
+    
+        if answer == "3" :
+            print(vec1.MinMax())
+
+        if answer == "4" :
+            print(vec1.Mult2())
+
+        if answer == "5" :   
+            vec2 = raw_input("enter second  vector: \n")
+            vec2 = VectorHelper(vec2)
+            try:
+                print(vec1.somme(vec2))
+            except SizeException : 
+                print("Size of vectors are different")
+       
+        if answer == "6" :        
+            vec1 = raw_input("Enter Your Vector: \n ")
+            vec1 = VectorHelper(vec1)
+        if answer == "7" :
+            break    
+
+if __name__ == "__main__":
+    main()

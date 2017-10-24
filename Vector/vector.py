@@ -3,11 +3,9 @@
 
 class VectorHelper(object):
 
-    
-
     def __init__(self, string_vector):
-        __elements = list()
-        __size = 0
+        self.__elements = list()
+        self.__size = 0
         
         self.__elements = list(map(float, self.__parse(string_vector)))
         self.__size = len(self.__elements)
@@ -81,7 +79,7 @@ class VectorHelper(object):
             reversed.append(self.__elements[self.size - i])
         return reversed    
     
-    def somme(self,other):
+    def somme(self, other):
         """
             returns sum of 2 vectors 
             throws exception if size of the two vectors is not the same 
@@ -97,4 +95,10 @@ class VectorHelper(object):
                 sum.append(self.__elements[i] + other.__elements[i] )
             return sum   
                 
-    
+
+class SizeException(Exception):
+
+    def __init__(self, msg=None):
+        super(msg)
+
+

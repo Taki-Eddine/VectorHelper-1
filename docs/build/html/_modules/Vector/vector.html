@@ -138,7 +138,7 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            a list containing reversed elements of vector</span>
-<span class="sd">            example:</span>
+<span class="sd">        Example:</span>
 
 <span class="sd">            {(1,2,3)} ---&gt; {(3,2,1)}</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -159,7 +159,7 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            a new list contaion the sum of the two vectors</span>
-<span class="sd">            example:</span>
+<span class="sd">        Example:</span>
 
 <span class="sd">            self = {(1,2,3)} and other = {(2,3,4)}</span>
 <span class="sd">            returns {(3,5,7)}</span>
@@ -174,7 +174,18 @@
             <span class="nb">sum</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
                 <span class="nb">sum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
-            <span class="k">return</span> <span class="nb">sum</span>   </div></div>
+            <span class="k">return</span> <span class="nb">sum</span>   </div>
+
+
+<div class="viewcode-block" id="VectorHelper.Mult2"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.Mult2">[docs]</a>    <span class="k">def</span> <span class="nf">Mult2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Multiplies all vector elements by 2</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            a list of the vectors elements multiplied by 2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__elements</span></div></div>
                 
 
 <div class="viewcode-block" id="SizeException"><a class="viewcode-back" href="../../Vector.html#Vector.vector.SizeException">[docs]</a><span class="k">class</span> <span class="nc">SizeException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>

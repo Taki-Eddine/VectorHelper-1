@@ -45,9 +45,6 @@
             
   <div class="section" id="vector-package">
 <h1>Vector package<a class="headerlink" href="#vector-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="module-Vector.vector">
 <span id="vector-vector-module"></span><h2>Vector.vector module<a class="headerlink" href="#module-Vector.vector" title="Permalink to this headline">¶</a></h2>
 <dl class="exception">
@@ -78,6 +75,16 @@ size: an int containing the number of elements</dd>
 </dl>
 </dd></dl>
 
+<dl class="method">
+<dt id="Vector.vector.VectorHelper.Mult2">
+<code class="descname">Mult2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Vector/vector.html#VectorHelper.Mult2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.VectorHelper.Mult2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplies all vector elements by 2</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>a list of the vectors elements multiplied by 2</dd>
+</dl>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="Vector.vector.VectorHelper.get_elements">
 <code class="descname">get_elements</code><a class="headerlink" href="#Vector.vector.VectorHelper.get_elements" title="Permalink to this definition">¶</a></dt>
@@ -94,11 +101,11 @@ size: an int containing the number of elements</dd>
 <dd><p>Returns reversed elements of the vec</p>
 <dl class="docutils">
 <dt>Returns:</dt>
-<dd><p class="first">a list containing reversed elements of vector
-example:</p>
-<p class="last">{(1,2,3)} —&gt; {(3,2,1)}</p>
-</dd>
+<dd>a list containing reversed elements of vector</dd>
 </dl>
+<p>Example:</p>
+<blockquote>
+<div>{(1,2,3)} —&gt; {(3,2,1)}</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
@@ -121,11 +128,13 @@ an exception is raised.</p>
 <dt>Args:</dt>
 <dd>Other: the list of elements we want to add to our vector</dd>
 <dt>Returns:</dt>
-<dd><p class="first">a new list contaion the sum of the two vectors
-example:</p>
-<p class="last">self = {(1,2,3)} and other = {(2,3,4)}
-returns {(3,5,7)}</p>
-</dd>
+<dd>a new list contaion the sum of the two vectors</dd>
+</dl>
+<p>Example:</p>
+<blockquote>
+<div>self = {(1,2,3)} and other = {(2,3,4)}
+returns {(3,5,7)}</div></blockquote>
+<dl class="docutils">
 <dt>Raises:</dt>
 <dd>SizeException: if the two vectors have different sizes.</dd>
 </dl>
@@ -139,10 +148,7 @@ returns {(3,5,7)}</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-Vector">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Vector" title="Permalink to this headline">¶</a></h2>
-</div>
+<span class="target" id="module-Vector"></span></div>
 </div>
 
 
@@ -154,9 +160,7 @@ returns {(3,5,7)}</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Vector package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-Vector.vector">Vector.vector module</a></li>
-<li><a class="reference internal" href="#module-Vector">Module contents</a></li>
 </ul>
 </li>
 </ul>

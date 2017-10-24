@@ -148,7 +148,7 @@ def main():
     print("_________________________ WELCOME TO VETOR HELPER ________________________ ")
     print("__________________________________________________________________________ ")
     
-    vec1 = raw_input("Enter Your Vector: \n ")
+    vec1 = input("Enter Your Vector: \n ")
     vec1 = VectorHelper(vec1)
     while(1):
         print("\n______________________________ MENU ______________________________________\n")
@@ -160,7 +160,7 @@ def main():
         print("6- Nouveau vecteur")
         print("7- Quitter")
         print("__________________________________________________________________________ ")
-        answer = raw_input("Votre Choix:\t ")
+        answer = input("Votre Choix:\t ")
         if answer == "1" :
             vec1.sort()
             print(vec1.get_elements)    
@@ -175,7 +175,7 @@ def main():
             print(vec1.Mult2())
 
         if answer == "5" :   
-            vec2 = raw_input("enter second  vector: \n")
+            vec2 = input("enter second  vector: \n")
             vec2 = VectorHelper(vec2)
             try:
                 print(vec1.somme(vec2))
@@ -183,7 +183,7 @@ def main():
                 print("Size of vectors are different")
        
         if answer == "6" :        
-            vec1 = raw_input("Enter Your Vector: \n ")
+            vec1 = input("Enter Your Vector: \n ")
             vec1 = VectorHelper(vec1)
         if answer == "7" :
             break    

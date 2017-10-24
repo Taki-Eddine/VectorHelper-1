@@ -1,6 +1,8 @@
 Vector package
 ==============
 
+Submodules
+----------
 
 Vector.vector module
 --------------------
@@ -10,6 +12,9 @@ Vector.vector module
     :undoc-members:
     :show-inheritance:
 
+
+Module contents
+---------------
 
 .. automodule:: Vector
     :members:

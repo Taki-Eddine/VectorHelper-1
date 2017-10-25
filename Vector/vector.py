@@ -60,6 +60,8 @@ class VectorHelper(object):
             
         Returns: 
             the size of the vector
+        Example: 
+            {(1,2,3)} returns 3
         """
         return self.__size
 
@@ -68,6 +70,8 @@ class VectorHelper(object):
 
         Returns:
              a tuple containing min and max values of the vector
+        Example: 
+            {(1,2,3)} returns {(1,3)}     
         """
         min = self.__elements[0]
         max = min
@@ -79,7 +83,12 @@ class VectorHelper(object):
               
         return min , max  
     def sort(self):
-        """Sorts Elements of the vector"""
+        """Sorts Elements of the vector
+
+
+        Example: 
+            {(2,5,1)} returns {(1,2,5)}
+        """
 
         for i in range(0, self.size - 1):
             for j in range (0 , self.size - i - 1):
@@ -105,7 +114,9 @@ class VectorHelper(object):
         
         Returns:
             a list of the vectors elements multiplied by 2
-        """
+        Example: 
+            {(1,2,3)} returns {(2,4,6)}
+        """,
         for i in range(0, self.size):
             self.__elements[i] = self.__elements[i] * 2
         return self.__elements      

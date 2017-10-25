@@ -60,6 +60,8 @@ class VectorHelper(object):
             
         Returns: 
             the size of the vector
+        Example: 
+            {(1,2,3)} returns 3
         """
         return self.__size
 
@@ -68,6 +70,8 @@ class VectorHelper(object):
 
         Returns:
              a tuple containing min and max values of the vector
+        Example: 
+            {(1,2,3)} returns {(1,3)}     
         """
         min = self.__elements[0]
         max = min
@@ -79,7 +83,12 @@ class VectorHelper(object):
               
         return min , max  
     def sort(self):
-        """Sorts Elements of the vector"""
+        """Sorts Elements of the vector
+
+
+        Example: 
+            {(2,5,1)} returns {(1,2,5)}
+        """
 
         for i in range(0, self.size - 1):
             for j in range (0 , self.size - i - 1):
@@ -99,14 +108,24 @@ class VectorHelper(object):
         reversed = list()
         for i in range(1, self.size + 1):
             reversed.append(self.__elements[self.size - i])
+<<<<<<< HEAD
         return reversed
 
+=======
+        return reversed  
+>>>>>>> bc8df059f83c7548f10c561e4a29e0149a2ccea3
     def Mult2(self):
         """Multiplies all vector elements by 2
         
         Returns:
             a list of the vectors elements multiplied by 2
+<<<<<<< HEAD
         """
+=======
+        Example: 
+            {(1,2,3)} returns {(2,4,6)}
+        """,
+>>>>>>> bc8df059f83c7548f10c561e4a29e0149a2ccea3
         for i in range(0, self.size):
             self.__elements[i] = self.__elements[i] * 2
         return self.__elements      
@@ -131,6 +150,7 @@ class VectorHelper(object):
             SizeException: if the two vectors have different sizes.
         """
 
+<<<<<<< HEAD
         if self.size != other.size:
             raise SizeException
         else: 
@@ -155,7 +175,22 @@ class VectorHelper(object):
 class SizeException(Exception):
     """Exception class raised when two sizes are different"""
     pass
+=======
+        if self.size != other.size :
+            raise SizeException()
+        else: 
+            sum = list()
+            for i in range(0, self.size):
+                sum.append(self.__elements[i] + other.__elements[i] )
+            return sum   
+                
+class SizeException(Exception):
 
+    """Exception class raised when two sizes are different"""
+>>>>>>> bc8df059f83c7548f10c561e4a29e0149a2ccea3
+
+    def __init__(self):
+        Exception.__init__(self,"Size of vectors is different") 
 
 def main():
     print("_________________________ WELCOME TO VETOR HELPER ________________________ ")

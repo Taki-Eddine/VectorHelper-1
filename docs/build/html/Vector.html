@@ -54,7 +54,11 @@
 <dl class="exception">
 <dt id="Vector.vector.SizeException">
 <em class="property">exception </em><code class="descclassname">Vector.vector.</code><code class="descname">SizeException</code><a class="reference internal" href="_modules/Vector/vector.html#SizeException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.SizeException" title="Permalink to this definition">¶</a></dt>
+<<<<<<< HEAD
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/exceptions.html#exceptions.Exception" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></a></p>
+=======
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/exceptions.html#exceptions.Exception" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></a></p>
+>>>>>>> bc8df059f83c7548f10c561e4a29e0149a2ccea3
 <p>Exception class raised when two sizes are different</p>
 </dd></dl>
 
@@ -76,18 +80,15 @@ size: an int containing the number of elements</dd>
 <dl class="docutils">
 <dt>Returns:</dt>
 <dd>a tuple containing min and max values of the vector</dd>
+<dt>Example: </dt>
+<dd>{(1,2,3)} returns {(1,3)}</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="Vector.vector.VectorHelper.Mult2">
 <code class="descname">Mult2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Vector/vector.html#VectorHelper.Mult2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.VectorHelper.Mult2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multiplies all vector elements by 2</p>
-<dl class="docutils">
-<dt>Returns:</dt>
-<dd>a list of the vectors elements multiplied by 2</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="Vector.vector.VectorHelper.get_elements">
@@ -119,6 +120,8 @@ size: an int containing the number of elements</dd>
 <dl class="docutils">
 <dt>Returns: </dt>
 <dd>the size of the vector</dd>
+<dt>Example: </dt>
+<dd>{(1,2,3)} returns 3</dd>
 </dl>
 </dd></dl>
 
@@ -148,6 +151,10 @@ returns {(3,5,7)}</div></blockquote>
 <dt id="Vector.vector.VectorHelper.sort">
 <code class="descname">sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Vector/vector.html#VectorHelper.sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Vector.vector.VectorHelper.sort" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sorts Elements of the vector</p>
+<dl class="docutils">
+<dt>Example: </dt>
+<dd>{(2,5,1)} returns {(1,2,5)}</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

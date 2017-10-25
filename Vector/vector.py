@@ -99,7 +99,8 @@ class VectorHelper(object):
         reversed = list()
         for i in range(1, self.size + 1):
             reversed.append(self.__elements[self.size - i])
-        return reversed  
+        return reversed
+
     def Mult2(self):
         """Multiplies all vector elements by 2
         
@@ -130,13 +131,15 @@ class VectorHelper(object):
             SizeException: if the two vectors have different sizes.
         """
 
-        if self.size != other.size :
+        if self.size != other.size:
             raise SizeException
         else: 
             sum = list()
             for i in range(0, self.size):
-                sum.append(self.__elements[i] + other.__elements[i] )
-            return sum   
+                sum.append(str(self.__elements[i] + other.__elements[i]))
+            return VectorHelper(' '.join(sum))
+
+
                 
 
 class SizeException(Exception):
@@ -178,8 +181,8 @@ def main():
             vec2 = input("enter second  vector: \n")
             vec2 = VectorHelper(vec2)
             try:
-                print(vec1.somme(vec2))
-            except SizeException : 
+                print(vec1.somme(vec2).get_elements)
+            except SizeException:
                 print("Size of vectors are different")
        
         if answer == "6" :        

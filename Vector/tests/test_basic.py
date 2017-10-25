@@ -2,9 +2,11 @@
 
 import unittest
 from Vector.vector import VectorHelper
+from Vector.vector import SizeException
 
 
 class VectorHelperTests(unittest.TestCase):
+
 
     def setUp(self):
         pass
@@ -16,7 +18,7 @@ class VectorHelperTests(unittest.TestCase):
         vector1 = VectorHelper("1 3 -1 6 -7 0.7")
         vector2 = VectorHelper("0 6 7 2 7 -7")
 
-        self.assertEqual(vector1.somme(vector2), [1.0, 9.0, 6.0, 8.0, 0.0, -6.3])
+        self.assertEqual(vector1.somme(vector2).get_elements, [1.0, 9.0, 6.0, 8.0, 0.0, -6.3])
 
     def test_inverse(self):
         vector = VectorHelper("1 3 -1 6 -7 0.7")

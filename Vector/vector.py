@@ -139,8 +139,18 @@ class VectorHelper(object):
                 sum.append(str(self.__elements[i] + other.__elements[i]))
             return VectorHelper(' '.join(sum))
 
-
+    def __add__(self, other):
+        if self.size != other.size:
+            raise SizeException
+        else:
+            sum = list()
+            for i in range(0, self.size):
+                sum.append(str(self.__elements[i] + other.__elements[i]))
+            return VectorHelper(' '.join(sum))
                 
+
+
+    
 
 class SizeException(Exception):
     """Exception class raised when two sizes are different"""

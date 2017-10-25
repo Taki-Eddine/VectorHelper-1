@@ -148,7 +148,8 @@
         <span class="nb">reversed</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
             <span class="nb">reversed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="n">i</span><span class="p">])</span>
-        <span class="k">return</span> <span class="nb">reversed</span>  </div>
+        <span class="k">return</span> <span class="nb">reversed</span></div>
+
 <div class="viewcode-block" id="VectorHelper.Mult2"><a class="viewcode-back" href="../../Vector.html#Vector.vector.VectorHelper.Mult2">[docs]</a>    <span class="k">def</span> <span class="nf">Mult2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Multiplies all vector elements by 2</span>
 <span class="sd">        </span>
@@ -179,14 +180,26 @@
 <span class="sd">            SizeException: if the two vectors have different sizes.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">SizeException</span>
         <span class="k">else</span><span class="p">:</span> 
             <span class="nb">sum</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
-                <span class="nb">sum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
-            <span class="k">return</span> <span class="nb">sum</span>   </div></div>
+                <span class="nb">sum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="k">return</span> <span class="n">VectorHelper</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sum</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SizeException</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">sum</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+                <span class="nb">sum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">__elements</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+            <span class="k">return</span> <span class="n">VectorHelper</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sum</span><span class="p">))</span></div>
                 
+
+
+    
 
 <div class="viewcode-block" id="SizeException"><a class="viewcode-back" href="../../Vector.html#Vector.vector.SizeException">[docs]</a><span class="k">class</span> <span class="nc">SizeException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception class raised when two sizes are different&quot;&quot;&quot;</span>
@@ -197,7 +210,7 @@
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;_________________________ WELCOME TO VETOR HELPER ________________________ &quot;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;__________________________________________________________________________ &quot;</span><span class="p">)</span>
     
-    <span class="n">vec1</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Enter Your Vector: </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
+    <span class="n">vec1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Your Vector: </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
     <span class="n">vec1</span> <span class="o">=</span> <span class="n">VectorHelper</span><span class="p">(</span><span class="n">vec1</span><span class="p">)</span>
     <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">______________________________ MENU ______________________________________</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -209,7 +222,7 @@
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;6- Nouveau vecteur&quot;</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;7- Quitter&quot;</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;__________________________________________________________________________ &quot;</span><span class="p">)</span>
-        <span class="n">answer</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Votre Choix:</span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">)</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre Choix:</span><span class="se">\t</span><span class="s2"> &quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span> <span class="p">:</span>
             <span class="n">vec1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
             <span class="k">print</span><span class="p">(</span><span class="n">vec1</span><span class="o">.</span><span class="n">get_elements</span><span class="p">)</span>    
@@ -224,15 +237,15 @@
             <span class="k">print</span><span class="p">(</span><span class="n">vec1</span><span class="o">.</span><span class="n">Mult2</span><span class="p">())</span>
 
         <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">&quot;5&quot;</span> <span class="p">:</span>   
-            <span class="n">vec2</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;enter second  vector: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">vec2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter second  vector: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">vec2</span> <span class="o">=</span> <span class="n">VectorHelper</span><span class="p">(</span><span class="n">vec2</span><span class="p">)</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="n">vec1</span><span class="o">.</span><span class="n">somme</span><span class="p">(</span><span class="n">vec2</span><span class="p">))</span>
-            <span class="k">except</span> <span class="n">SizeException</span> <span class="p">:</span> 
+                <span class="k">print</span><span class="p">(</span><span class="n">vec1</span><span class="o">.</span><span class="n">somme</span><span class="p">(</span><span class="n">vec2</span><span class="p">)</span><span class="o">.</span><span class="n">get_elements</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">SizeException</span><span class="p">:</span>
                 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Size of vectors are different&quot;</span><span class="p">)</span>
        
         <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">&quot;6&quot;</span> <span class="p">:</span>        
-            <span class="n">vec1</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Enter Your Vector: </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
+            <span class="n">vec1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Your Vector: </span><span class="se">\n</span><span class="s2"> &quot;</span><span class="p">)</span>
             <span class="n">vec1</span> <span class="o">=</span> <span class="n">VectorHelper</span><span class="p">(</span><span class="n">vec1</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">&quot;7&quot;</span> <span class="p">:</span>
             <span class="k">break</span>    </div>

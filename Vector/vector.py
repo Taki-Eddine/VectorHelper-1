@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+import os
 
 class VectorHelper(object):
     """Main class
@@ -164,6 +165,7 @@ def main():
     vec1 = input("Enter Your Vector: \n ")
     vec1 = VectorHelper(vec1)
     while(1):
+	os.system("cls" if os.name == "nt" else "clear")
         print("\n______________________________ MENU ______________________________________\n")
         print("1- Tri du vecteur")
         print("2- inverser le vecteur")

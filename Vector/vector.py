@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import sys
 
 class VectorHelper(object):
     """Main class
@@ -199,7 +199,7 @@ def main():
             vec1 = input("Enter Your Vector: \n ")
             vec1 = VectorHelper(vec1)
         if answer == "7" :
-            break    
+            sys.exit(0)    
 
 if __name__ == "__main__":
     main()
